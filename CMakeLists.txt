@@ -1,5 +1,5 @@
 project(dsa-seahorn)
-cmake_minimum_required(VERSION 2.8.11)
+cmake_minimum_required(VERSION 3.3)
 
 if (CMAKE_SOURCE_DIR STREQUAL CMAKE_BINARY_DIR )
   message (FATAL_ERROR
@@ -13,7 +13,7 @@ list (APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 set(CMAKE_FIND_LIBRARY_SUFFIXES ".a" ${CMAKE_FIND_LIBRARY_SUFFIXES})
 
 
-find_package (LLVM 3.8.0 REQUIRED CONFIG NO_DEFAULT_PATH)
+find_package (LLVM 6.0.0 REQUIRED CONFIG NO_DEFAULT_PATH)
 message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")
 message(STATUS "Using LLVMConfig.cmake in: ${LLVM_DIR}")
 
